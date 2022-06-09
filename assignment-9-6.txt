@@ -1,0 +1,2 @@
+Implement the code for alert box and confirm box in javascript
+Implement find and filter method using arrow function
