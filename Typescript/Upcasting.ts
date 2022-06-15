@@ -2,14 +2,12 @@ class NeoEmployee{
     empId:number;   // public
     empName:string;
     empSalary:number;  // consider this as basic salary
-    deparmentName:string;
     hra:number;
     constructor(empId:number,empName:string,empSalary:number){
         console.log("In superclass p-constructor"); 
         this.empId=empId;
         this.empName=empName;
         this.empSalary=empSalary;
-        this.deparmentName="LD" ;
     }
     getDetails():string{
         return "id:"+this.empId+" name:"+this.empName+" salary:"+this.empSalary;
@@ -42,6 +40,10 @@ class NeoTrainer extends NeoEmployee{
         return this.empSalary+this.hra+this.tra;
     } 
 
+    demo(){
+
+    }
+
 } // end of class
 
 let employee=new NeoEmployee(333,'Pooja',45000);
@@ -57,30 +59,16 @@ console.log(trainer2.getDetails());
 console.log("Trainer-2 Gross:"+trainer2.getGrossSalary());// sub class method (function overrding)
 
 
-/* when u subclass object superclass object gets automatically created
-super class constructor (def constr), then subclass def constructor 
-*/
-/* when u create own constructor in subclass then super call must be there*/
-
-
-
-
-
-
-class A{
-
-    dream():NeoEmployee{
-            return new NeoEmployee(12,'a',67000);
-    }
+function getGross(emp:NeoEmployee){
+    console.log(typeof emp);
+    console.log(emp.getGrossSalary());
+    // common and overriding properties are visible
+    // unique properties not visible
 }
 
-class B extends A{
+getGross(employee);
+getGross(trainer1);  //NeoTrainer
 
-     dream():NeoTrainer {
-            return new NeoTrainer(11,'a',45000,'fe',4);
-    }
-}
-
-/*1. Can not reduce the scope 
-2. if superclass method has return type it should be same in subclass o method
-3. covariants allowed*/
+let emp:NeoEmployee;
+emp=new NeoTrainer(423,"HariPrasad",50000,'Back End',10);   // upcasting
+console.log((<NeoTrainer>emp).specialization);
