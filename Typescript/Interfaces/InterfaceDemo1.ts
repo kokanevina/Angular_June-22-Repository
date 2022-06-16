@@ -29,6 +29,13 @@ class NeoTrainer implements EmployeeIntf{
 
 }
 
+class PythonTrainer extends NeoTrainer{
+    getGrossSalary(sal: number): number {
+        // implement this method from trainer
+    return 0;
+    }
+}
+
 class NeoDeveloper implements EmployeeIntf{
     id:number;
     name:string;
