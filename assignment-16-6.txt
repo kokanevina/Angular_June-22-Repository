@@ -1,4 +1,4 @@
 Q. Implement the Student class : with instance variables : studId, studName, studPercentage
- studentId should be autoincremented. (Take the help of static variable)
+ studId should be autoincremented. (Take the help of static variable)
 
 Q. Can we declare instance variable readonly? if yess then Implement example
