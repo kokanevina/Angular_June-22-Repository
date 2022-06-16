@@ -38,3 +38,18 @@ console.log(NeoEmployee.companyName);
 NeoEmployee.showId(employee2);
 /* non static method can access static variables? : yess 
 static method can access non static members? : via object*/
+const pie=3.142;
+class Circle{
+    radius:number;
+    public static readonly pie=3.142;   // shared constants
+    area():number{
+            return Circle.pie*this.radius*this.radius;
+    }
+
+}
+let circle1=new Circle();
+let ar1=circle1.area();
+//Circle.pie=3.4;
+let circle2=new Circle();
+let ar2=circle1.area();
+
