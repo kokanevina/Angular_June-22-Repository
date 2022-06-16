@@ -1,0 +1,1 @@
+Implement Inheritance Train and LocalTrain. Show method overriding and use of super. 
