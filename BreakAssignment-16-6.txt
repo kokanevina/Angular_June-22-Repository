@@ -1,0 +1,3 @@
+Is it allowed if a class implementing multiple interfaces.
+If yes : Implement a logic for it. 
+Prove that multiple inheritance via interfaces is allowed and does not give ambiguity 
