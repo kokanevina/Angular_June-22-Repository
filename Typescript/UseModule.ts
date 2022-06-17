@@ -1,6 +1,8 @@
 import {College,universityName as uniName} from './MyModule/MyCollege';
 import setUniv from './MyModule/MyCollege'; // use this import for default exports
 import * as dept from './MyModule/MyDeparment';
+import deptArea from './MyModule/MyDeparment';
+// properties exported default can not be accessed using import *
 let col=new College();
 col.collegeCode="ddfgg";
 col.collegeName="LTEC";
@@ -15,5 +17,5 @@ deparment.deptCode="CSE";
 deparment.deptBudget=5000000;
 let head=new dept.DepartmentHead();
 // so on..
-console.log(dept.deptArea);
+console.log(deptArea);
 //dept.deptArea="4546";

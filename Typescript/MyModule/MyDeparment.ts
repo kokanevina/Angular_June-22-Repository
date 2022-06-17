@@ -10,4 +10,6 @@ export class DepartmentHead{
     //... so on
 }
 
-export let deptArea="450 sqft";
+ let deptArea="450 sqft";
+
+ export default deptArea;
