@@ -11,5 +11,7 @@ export class DepartmentHead{
 }
 
  let deptArea="450 sqft";
+let test="abc";
 
  export default deptArea;
+ //export default test;
