@@ -19,3 +19,5 @@ let head=new dept.DepartmentHead();
 // so on..
 console.log(deptArea);
 //dept.deptArea="4546";
+
+
