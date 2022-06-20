@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'databinding';
+ // logic of one way data binding
+ //string interpolation
+  india="India is my country. All indians are my brothers and sisters";
+
+  // logic of two way data binding
+  // logic of ng-model : directive
+  companyName="Neosoft Technologies";
+  updateModel(){
+    // changes in view will update the model also
+    console.log(this.companyName); 
+  }
 }
