@@ -4,9 +4,9 @@
  <i>{{companyName}}</i>
 <h3>Example of ngModel directive</h3>
 <label>Enter company name:</label>
-<input type="text" [(ngModel)]="companyName" (input)="updateModel()"><br> <!-- try with blur-->
+<input type="text" [(ngModel)]="companyName" (input)="updateModel($event)"><br> <!-- try with blur-->
 <i>{{companyName}}</i>
-<select [(ngModel)]="companyName" (change)="updateModel()"> <!-- change : when we change option-->
+<select [(ngModel)]="companyName" (change)="updateModel($event)"> <!-- change : when we change option-->
   <option value="Squad Infotech">Squad Infotech</option>
   <option value="Coder Technologies">Coder Technologies</option>
   <option value="Seed Infotech">Seed Infotech</option>
@@ -15,6 +15,10 @@
 </select> 
 <i>{{companyName}}</i>
 </div>
+<hr>
+<section>
+  <app-maths></app-maths>
+</section>
 <!--
   {{}} : string interpolation
   [()] : ngModel

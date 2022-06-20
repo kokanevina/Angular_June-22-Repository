@@ -13,7 +13,8 @@ export class AppComponent {
   // logic of two way data binding
   // logic of ng-model : directive
   companyName="Neosoft Technologies";
-  updateModel(){
+  updateModel(ev:any){
+    console.log(ev);
     // changes in view will update the model also
     console.log(this.companyName); 
   }

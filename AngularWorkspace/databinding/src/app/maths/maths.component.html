@@ -1,0 +1,23 @@
+<div>
+    <h2>Addition using ngModel</h2>
+    <label>Enter number 1:</label>
+    <input type="number" [(ngModel)]="number1"> <br>
+    <label>Enter number 2:</label>
+    <input type="number" [(ngModel)]="number2">
+    <br>
+    <button (click)="add()">ADD</button>
+    <p>Addition is : <b>{{number1+number2}}</b></p>
+    <p>Addition is : <b>{{result}}</b></p>
+</div>
+<div>
+    <h2>Addition using Template Reference Variable</h2>
+    <label>Enter number 1:</label>
+    <input type="number" #numnode1> <br>
+    <label>Enter number 2:</label>
+    <input type="number" #numnode2>
+    <br>
+    <button (click)="add1(numnode1,numnode2)">ADD by passing nodes</button>
+    <button (click)="add2(numnode1.value,numnode2.value)">ADD by passing values</button>
+    <p>Addition is : <b>{{result1}}</b></p>
+</div>
+
