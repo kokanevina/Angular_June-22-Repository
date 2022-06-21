@@ -3,3 +3,9 @@ Implement new project Angular Forms
 Implement login form   : LoginComponent
 
 Implement registration form : name, password, age, contactnumber, confirm password, username,emailid : Registration Component
+
+
+Create Seperate ts file for Student class
+declare student class with id,name and standard
+import class in app.component.ts file and create student array with 5 object.
+Diplay student information in table using array

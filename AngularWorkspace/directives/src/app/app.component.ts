@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   age=0;
+  array=['tea', 'coffee', 'green tea'];
 }
