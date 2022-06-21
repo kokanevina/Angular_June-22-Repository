@@ -1,0 +1,24 @@
+<section>
+    <input [type]="inputType" [(ngModel)]="pass" placeholder="Enter password">
+    <input type="checkbox" [(ngModel)]="state" (change)="showPassword()"><label>:Show Password</label>
+    <br>
+    <!-- create ordered list, create a button named "change type" ,
+        store all available types in array, 
+   when u click on the button the type of the ordered list should be applied 
+   from array
+ ['1','A','a','I','i'] -->
+ <ol [type]="myType">
+    <li>tea</li>
+    <li>coffee</li>
+    <li>green tea</li>
+ </ol>
+
+ <button (click)="change()">Change Type</button>
+ <img [src]="myImg.src" [alt]="myImg.altMessage" [height]="myImg.height" [width]="myImg.width">
+</section>
+<!--
+    {{}} : string interpolation
+    [] : attribute binding
+    () : event binding
+    [()]: ngModel 
+-->
