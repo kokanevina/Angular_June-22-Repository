@@ -32,5 +32,33 @@
       </ng-template>
     </ng-template>
   </div>
+  <div>
+    <h2>*ngIf then else</h2>
+    <label>Enter Age:</label><input type="number" [(ngModel)]="age"> 
+  <ng-container *ngIf="age<0; then thenblock1; else elseblock1"></ng-container>
+  <ng-template #thenblock1>
+    <p>
+      <b>Invalid age</b>
+    </p>   
+  </ng-template>
+  <ng-template #elseblock1>
+    <b>Valid age</b>
+      <ng-container *ngIf="age>=18; then thenblock2; else elseblock2 ">
+      </ng-container> <!-- u can use any html element to check condition-->
+      <ng-template #thenblock2>   <!-- then and else should refer ng-template-->
+        <p >
+          <b>Your are allowed for voting</b>
+        </p>
+      </ng-template>
+      <ng-template #elseblock2>
+        <p >
+          <b>Your are  Not allowed for voting</b>
+        </p>
+      </ng-template>
+  </ng-template>
+  </div>
+
+
+
 </section>
 

@@ -1,0 +1,5 @@
+Implement new project Angular Forms
+
+Implement login form   : LoginComponent
+
+Implement registration form : name, password, age, contactnumber, confirm password, username,emailid : Registration Component
