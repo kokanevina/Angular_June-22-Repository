@@ -129,8 +129,41 @@
   <div>
     <h2>ngStyle</h2>
     <label>Choose Backgroundcolor</label>
-    <input type="color" [(ngModel)]="bgColor">
+    <input type="color" [(ngModel)]="bgColor" (input)="setBg()">
     <h1 [ngStyle]="{border:'3px solid red', backgroundColor:bgColor,color:'blue'}">Welcome to Neosoft Technologies</h1>
+    <h1 [ngStyle]="myStyle">India is my country</h1>
+  </div>
+  <div>
+    <h2>ngClass</h2>
+    <ol ngClass="fontClass borderClass colorClass">
+      <li *ngFor="let ele of techArr">{{ele}}
+          <ul>
+            <li *ngFor="let ele1 of subArr">{{ele1}}</li>
+          </ul>
+      </li>
+     </ol>
+     <ol [ngClass]="['fontClass', 'borderClass', 'colorClass']">
+      <li *ngFor="let ele of techArr">{{ele}}
+          <ul>
+            <li *ngFor="let ele1 of subArr">{{ele1}}</li>
+          </ul>
+      </li>
+     </ol>
+     <ol [ngClass]="styleArray">
+      <li *ngFor="let ele of techArr">{{ele}}
+          <ul>
+            <li *ngFor="let ele1 of subArr">{{ele1}}</li>
+          </ul>
+      </li>
+     </ol>
+     <button (click)="styleArray.pop()">POP</button>
+     <ol [ngClass]="myClassStyle">
+      <li *ngFor="let ele of techArr">{{ele}}
+          <ul>
+            <li *ngFor="let ele1 of subArr">{{ele1}}</li>
+          </ul>
+      </li>
+     </ol>
   </div>
 </section>
 
