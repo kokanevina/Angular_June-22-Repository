@@ -14,4 +14,5 @@ export class AppComponent {
   choice=3;
   hotD="";
   perc=45;
+  bgColor='yellow';
 }

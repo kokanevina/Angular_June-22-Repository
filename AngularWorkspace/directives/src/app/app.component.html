@@ -124,4 +124,13 @@
       </p>
   </section>
 </section>
+<section>
+  <h1>Attribute Directives</h1>
+  <div>
+    <h2>ngStyle</h2>
+    <label>Choose Backgroundcolor</label>
+    <input type="color" [(ngModel)]="bgColor">
+    <h1 [ngStyle]="{border:'3px solid red', backgroundColor:bgColor,color:'blue'}">Welcome to Neosoft Technologies</h1>
+  </div>
+</section>
 
