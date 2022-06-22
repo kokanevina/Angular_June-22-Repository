@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Student } from 'src/Data/Student';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -35,4 +35,30 @@ export class AppComponent {
   'borderClass':true,
   'colorClass':true
  }
+ studArray=[
+            new Student(234,'hari','Nursary'), 
+            new Student(111,'Poonam','Junior KG'),
+            new Student(121,'Swara','Junior KG'),
+            new Student(211,'Pooja','Nursary'),
+            new Student(114,'Sanam','Junior KG'),
+            new Student(112,'Pari','Senior KG'),
+            new Student(115,'Krupa','Nursary'),
+            new Student(113,'Harish','Senior KG'),
+            new Student(118,'Sagar','Senior KG'),
+            new Student(110,'Kalpesh','Junior KG')
+          ];
+
+      getColor(stdChoice:string){
+        
+      switch(stdChoice){
+          case 'Nursary':
+            return 'yellow'
+          case  'Junior KG':
+            return 'pink'
+          case 'Senior KG' :
+            return 'blue'
+          default :
+            return 'red'
+      }
+    }   
 }

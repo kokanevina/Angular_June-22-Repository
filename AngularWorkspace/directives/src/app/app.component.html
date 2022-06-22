@@ -165,5 +165,22 @@
       </li>
      </ol>
   </div>
+  <div>
+    <!-- <select [(ngModel)]="stdChoice">
+      <option value="Nursary">NURSARY</option>
+      <option value="Junior KG">JR KG</option>
+      <option value="Senior KG">SR KG</option>
+    </select> -->
+    <table border="4" [ngStyle]="{width:'50%'}">
+      <thead></thead>
+      <tbody>
+        <tr *ngFor="let student of studArray" [ngStyle]="{backgroundColor:getColor(student.stdStandard)}">
+          <td>{{student.stdId}}</td>
+          <td>{{student.stdName}}</td>
+          <td>{{student.stdStandard}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
