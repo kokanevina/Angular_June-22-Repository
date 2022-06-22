@@ -181,6 +181,19 @@
         </tr>
       </tbody>
     </table>
+    <table border="4" [ngStyle]="{width:'50%'}">
+      <thead></thead>
+      <tbody>
+        <tr *ngFor="let student of studArray; let i=index;let f=first; let l=last; let e=even;let o=odd">
+          <td>{{i}}-{{f}}-{{l}}</td>
+          <td>{{e}}</td>
+          <td>{{o}}</td>
+          <td>{{student.stdId}}</td>
+          <td>{{student.stdName}}</td>
+          <td>{{student.stdStandard}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
