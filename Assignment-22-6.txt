@@ -1,0 +1,9 @@
+Edit previous Assignment and add new variable
+stdId, stdName, stdStandard, stdMarks : number[]
+
+In html template result should be like following
+
+101 Hari 4th  45,34,67,
+102 Pooja 4th 56,55,59,
+
+

@@ -57,9 +57,52 @@
       </ng-template>
   </ng-template>
   </div>
-   <ol>
-    <li *ngFor="let ele of array">{{ele}}</li>
-   </ol>
+  <div>
+    <h2>*ngFor</h2>
+    <ol>
+      <li *ngFor="let ele of array">{{ele}}</li>
+     </ol>
+     <h2>*ngFor with nested loop</h2>
+     <ol>
+      <li *ngFor="let ele of techArr">{{ele}}
+          <ul>
+            <li *ngFor="let ele1 of subArr">{{ele1}}</li>
+          </ul>
+      </li>
+     </ol>
+  </div>
+  <div>
+    <h2>ngSwitch</h2>
+    <ol>
+      <li *ngFor="let ele of array">{{ele}}</li>
+     </ol>
+     <h3>operations on array</h3>
+     <ol>
+      <li>Push</li>
+      <li>Pop</li>
+      <li>Display</li>
+     </ol>
+     <label>Enter your choice</label>
+     <input type="number" [(ngModel)]="choice">
+     <section [ngSwitch]="choice">
+          <p *ngSwitchCase="1">
+            <label>Enter element to push inot array</label>
+            <input type="text" [(ngModel)]="hotD">
+            <button (click)="array.push(hotD)">PUSH ELEMENT</button>
+          </p>
+          <p *ngSwitchCase="2">
+            <button (click)="array.pop()">POP ELEMENT</button>
+          </p>
+          <div *ngSwitchCase="3">
+            <ol>
+              <li *ngFor="let ele of array">{{ele}}</li>
+             </ol>
+          </div>
+          <p *ngSwitchDefault>
+              <b>WRONG CHOICE !!!!</b>
+          </p>
+     </section>
+  </div>
 
 </section>
 

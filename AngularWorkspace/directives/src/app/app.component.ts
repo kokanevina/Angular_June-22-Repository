@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   age=0;
   array=['tea', 'coffee', 'green tea'];
+
+  techArr=['java','javascript','python'];
+  subArr=['core','advaced']
+  choice=0;
+  hotD="";
 }
