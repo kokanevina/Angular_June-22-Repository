@@ -77,16 +77,21 @@
       <li *ngFor="let ele of array">{{ele}}</li>
      </ol>
      <h3>operations on array</h3>
-     <ol>
+    <!--  <ol>
       <li>Push</li>
       <li>Pop</li>
       <li>Display</li>
      </ol>
      <label>Enter your choice</label>
-     <input type="number" [(ngModel)]="choice">
+     <input type="number" [(ngModel)]="choice"> -->
+     <select [(ngModel)]="choice">
+      <option value="1">PUSH</option>
+      <option value="2">POP</option>
+      <option value="3">DISPLAY</option>
+     </select>
      <section [ngSwitch]="choice">
           <p *ngSwitchCase="1">
-            <label>Enter element to push inot array</label>
+            <label>Enter element to push into array</label>
             <input type="text" [(ngModel)]="hotD">
             <button (click)="array.push(hotD)">PUSH ELEMENT</button>
           </p>
@@ -103,6 +108,20 @@
           </p>
      </section>
   </div>
-
+  <!-- enter 3 subjects marks, calculate percentage then implement following switch case-->
+  <section [ngSwitch]="true">
+      <p *ngSwitchCase="perc>=70">
+          <b>Distinction</b>
+      </p>
+      <p *ngSwitchCase="perc>=60 && perc<70">
+          <b>First Class</b>
+      </p>
+      <p *ngSwitchCase="perc>=40 && perc<60">
+          <b>Pass</b>
+      </p>
+      <p *ngSwitchCase="perc<40">
+          <b>FAIL</b>
+      </p>
+  </section>
 </section>
 

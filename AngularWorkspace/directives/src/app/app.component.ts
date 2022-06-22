@@ -11,6 +11,7 @@ export class AppComponent {
 
   techArr=['java','javascript','python'];
   subArr=['core','advaced']
-  choice=0;
+  choice=3;
   hotD="";
+  perc=45;
 }
