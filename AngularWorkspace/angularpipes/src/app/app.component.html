@@ -73,4 +73,29 @@
             <!-- for code put false/'code', for symbol: bydefault true/'symbol' -->
         </ol>
     </div>
+    <div>
+        <h2>Order BY Pipe : orderBy</h2>
+        <ol>
+            <li *ngFor="let sal of salaryArray | orderBy">{{sal }}</li>
+        </ol>
+        
+        <table border="3" [ngStyle]="{width:'70%'}">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>BASIC SALARY</th>
+                    <th>JOINING DATE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.basicSalary}}</td>
+                    <td>{{employee.joinDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </section>
