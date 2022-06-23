@@ -7,9 +7,10 @@
         <b>{{title | uppercase}}</b><br>
         <b>{{title | lowercase}}</b><br>
         <b>{{title | titlecase}}</b><br>
+     
         <b>{{india}}</b><br>
         <b>{{india.slice(1,5)}}</b><br> <!-- design+development mixture-->
-        <b>{{india | slice : 2}}</b><br> <!--method: 1st parameter : string to be sliced
+        <b>{{india | slice : 2}}</b><br> <!--transform method: 1st parameter : string to be sliced
         2nd parameters. start index, 3rd para: end index (optional)-->
         <b>{{india | slice : 2 : 9}}</b><br>
         </div>
@@ -100,5 +101,13 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div>
+        <h2>Custom Pipe : charAt</h2>
+        <b>{{title}}</b><br>
+        <b>{{title | charAt : 5}}</b><br>
+        <b>{{title | charAt : 0}}</b><br>
+        <b>{{title | charAt : 1}}</b><br>
+        <b>{{title | charAt : 2}}</b><br>
     </div>
 </section>
