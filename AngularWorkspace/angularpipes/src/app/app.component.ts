@@ -13,4 +13,5 @@ export class AppComponent {
 
   salaryArray=[78900.457345,78900,76567.12, 56455.777,76789.5, 50000.4444]
 
+  today=new Date();
 }

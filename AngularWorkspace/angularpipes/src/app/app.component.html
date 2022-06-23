@@ -12,6 +12,8 @@
         <b>{{india | slice : 2}}</b><br> <!--method: 1st parameter : string to be sliced
         2nd parameters. start index, 3rd para: end index (optional)-->
         <b>{{india | slice : 2 : 9}}</b><br>
+        </div>
+        <div>
         <h2>Number Pipe : number</h2>
         <h3>{{salary}}</h3>
         <h3>{{salary | number}}</h3>  <!-- comma, 3 digits after decimal point-->
@@ -30,6 +32,45 @@
         </ol>
         <ol>
             <li *ngFor="let sal of salaryArray">{{sal | number :'6.1-2'}}</li> <!-- 6 digits before dp-->
+        </ol>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | number : '5.0-0'}}</li> 
+        </ol>
+        <ol>
+            <span *ngFor="let sal of salaryArray; let o=odd">
+                <li *ngIf="sal>55000">
+                    {{sal}}
+                </li> 
+            </span> 
+        </ol>
+    </div>
+    <div>
+        <h2>Currency Pipe: currency</h2>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal }}</li>
+        </ol>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | currency}}</li><!-- $,  comma, 2 decimal places-->
+        </ol> 
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | currency : 'INR'}}</li>
+            <!-- put currency code : it will display symbol-->
+        </ol>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | currency : 'INR' : 'code' }}</li>
+            <!-- for code put false/'code', for symbol: bydefault true/'symbol' -->
+        </ol>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | currency : 'INR' : false :'5.1-1'}}</li>
+            <!-- for code put false/'code', for symbol: bydefault true/'symbol' -->
+        </ol>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | currency : 'INR' : true :'5.1-1'}}</li>
+            <!-- for code put false/'code', for symbol: bydefault true/'symbol' -->
+        </ol>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | currency : 'EUR' :false:'5.1-1'}}</li>
+            <!-- for code put false/'code', for symbol: bydefault true/'symbol' -->
         </ol>
     </div>
 </section>
