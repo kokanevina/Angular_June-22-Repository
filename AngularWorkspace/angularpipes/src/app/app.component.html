@@ -1,0 +1,35 @@
+<section>
+    <h1>PIPES DEMO</h1>
+    <div>
+        <h2>String Pipes : uppercase, lowercase, titlecase, slice</h2>
+        <b>{{title}}</b> <br>
+        <b>{{title.toLowerCase()}}</b> <br><!-- design+development mixture-->
+        <b>{{title | uppercase}}</b><br>
+        <b>{{title | lowercase}}</b><br>
+        <b>{{title | titlecase}}</b><br>
+        <b>{{india}}</b><br>
+        <b>{{india.slice(1,5)}}</b><br> <!-- design+development mixture-->
+        <b>{{india | slice : 2}}</b><br> <!--method: 1st parameter : string to be sliced
+        2nd parameters. start index, 3rd para: end index (optional)-->
+        <b>{{india | slice : 2 : 9}}</b><br>
+        <h2>Number Pipe : number</h2>
+        <h3>{{salary}}</h3>
+        <h3>{{salary | number}}</h3>  <!-- comma, 3 digits after decimal point-->
+        <h3>{{salary | number : '5.2'}}</h3> <!-- 5 digits b4, 2 digits aftr decimal point-->
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal }}</li>
+        </ol>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | number :'5.2'}}</li> <!-- min 2 digits after dp, max: bydefault 3-->
+        </ol>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | number :'5.2-2'}}</li> <!-- min 2 , max 2-->
+        </ol>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | number :'5.1-2'}}</li> <!-- min 1 , max 2-->
+        </ol>
+        <ol>
+            <li *ngFor="let sal of salaryArray">{{sal | number :'6.1-2'}}</li> <!-- 6 digits before dp-->
+        </ol>
+    </div>
+</section>
