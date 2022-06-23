@@ -35,6 +35,6 @@ export class AppComponent {
     if(event.target.value=='true')
       this.caseState=true;
     else
-    this.caseState=false;
+      this.caseState=false;
   }
 }
