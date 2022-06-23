@@ -78,18 +78,21 @@
         <ol>
             <li *ngFor="let sal of salaryArray | orderBy">{{sal }}</li>
         </ol>
-        
+        <select [(ngModel)]="caseState" (change)="test($event)">
+            <option value="false">case sensitive</option>
+            <option value="true">case insensitive</option>
+        </select>
         <table border="3" [ngStyle]="{width:'70%'}">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>BASIC SALARY</th>
-                    <th>JOINING DATE</th>
+                    <th (click)="sortBy('id')">ID</th>
+                    <th (click)="sortBy('name')">NAME</th>
+                    <th (click)="sortBy('basicSalary')"> BASIC SALARY</th>
+                    <th (click)="sortBy('joinDate')">JOINING DATE</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let employee of employees">
+                <tr *ngFor="let employee of employees | orderBy : property:true:caseState">
                     <td>{{employee.id}}</td>
                     <td>{{employee.name}}</td>
                     <td>{{employee.basicSalary}}</td>

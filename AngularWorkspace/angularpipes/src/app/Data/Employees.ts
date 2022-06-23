@@ -4,7 +4,6 @@ export class Employee{
     name:string;
     basicSalary:number;
     joinDate:Date;
-
     constructor(id:number,name:string,basicSalary:number, joinDate:Date){
         this.id=id;
         this.basicSalary=basicSalary;
