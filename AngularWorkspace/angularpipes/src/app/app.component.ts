@@ -26,11 +26,21 @@ export class AppComponent {
     new Employee(122,'arun',99000,new Date('30-May-2004')),
     new Employee(333,'bhavana',55000,new Date('23-Aug-2002'))
   ]
+  caseState=false;
+  sortOrder=false;
   property='id';
   sortBy(key:string){
+   // console.log("Heading on which we clicke:"+key);
+   // console.log("previous heading :"+this.property);
+   /*  if(this.property==key)
+      this.sortOrder=!this.sortOrder;
+    else
+      this.sortOrder=false;
+    this.property=key; */
+    this.property==key?this.sortOrder=!this.sortOrder:this.sortOrder=false;
     this.property=key;
   }
-  caseState=false;
+  
   test(event:any){
     if(event.target.value=='true')
       this.caseState=true;

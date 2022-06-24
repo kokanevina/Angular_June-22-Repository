@@ -1,0 +1,5 @@
+
+
+Implement a Pipe which returns a length of string
+  str | length
+str | length : startIndex from where u count a length

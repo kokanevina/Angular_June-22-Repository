@@ -93,7 +93,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let employee of employees | orderBy : property:false:caseState">
+                <tr *ngFor="let employee of employees | orderBy : property:sortOrder:caseState">
                     <td>{{employee.id}}</td>
                     <td>{{employee.name}}</td>
                     <td>{{employee.basicSalary}}</td>
