@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { OrderModule } from 'ngx-order-pipe';
 import { AppComponent } from './app.component';
 import { CharAtPipe } from './custompipe/charat.pipe';
+import { CapitalcasePipe } from './custompipe/capitalcase.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharAtPipe
+    CharAtPipe,
+    CapitalcasePipe
   ],
   imports: [
     BrowserModule, OrderModule,FormsModule
