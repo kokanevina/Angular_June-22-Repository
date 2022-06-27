@@ -6,17 +6,17 @@ import { FormGroup,FormControl } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+ 
+
   loginForm:FormGroup;
-  constructor() {
-   }
+  constructor() { }
 
   ngOnInit(): void {
-      this.loginForm=new FormGroup({
-          username:new FormControl(),
-          password:new FormControl()
-      });
+    this.loginForm=new FormGroup({
+      username:new FormControl(),
+      password:new FormControl()
+  });
   }
-
   get uname(){
     return this.loginForm.get('username');
   }
