@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup,FormControl } from '@angular/forms';
+import { FormGroup,FormControl,Validators } from '@angular/forms';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -7,17 +7,18 @@ import { FormGroup,FormControl } from '@angular/forms';
 })
 export class RegisterComponent implements OnInit {
   registerForm:FormGroup;
+  passPattern=new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,15})");
   constructor() {
    }
 
   ngOnInit(): void {
       this.registerForm=new FormGroup({
-          name:new FormControl(),
-          emailId:new FormControl(),
-          age:new FormControl(),
-          username:new FormControl(),
-          password:new FormControl(),
-          confirmPassword:new FormControl()
+          name:new FormControl("",[Validators.required, Validators.minLength(2)]),
+          emailId:new FormControl("",[Validators.required,Validators.email]),
+          age:new FormControl("",[Validators.required,Validators.min(16),Validators.max(40)]),
+          username:new FormControl("",[Validators.required, Validators.minLength(4),Validators.maxLength(12)]),
+          password:new FormControl("",[Validators.required,Validators.pattern(this.passPattern)]),
+          confirmPassword:new FormControl("",[Validators.required])
       });
   }
   get uname(){
@@ -29,7 +30,7 @@ export class RegisterComponent implements OnInit {
   get name(){
     return this.registerForm.get('name');
   }
-  get email(){
+  get mail(){
     return this.registerForm.get('emailId');
   }
   get age(){

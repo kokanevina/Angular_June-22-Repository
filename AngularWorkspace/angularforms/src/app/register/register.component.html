@@ -1,32 +1,85 @@
 <section class="container">
-    <h2 class="text-info">User Registration </h2>
+    <h2 class="text-info">User Registration for HTML Course </h2>
     <div class="border border-2 p-3 bg-warning w-50">  
     <form [formGroup]="registerForm" (submit)="collectForm()">
       <label for="fname" class="form-label">Name</label>
       <input type="text" id="fname" class="form-control" formControlName="name">
-
+      <div class="errorBlock" *ngIf="name.invalid">
+           <div *ngIf="name.touched && name.errors.required">
+                <b>This field is required</b>
+           </div>
+           <div *ngIf="name.touched && name.errors.minlength">
+            <b>Name should be atleast 2 chars long</b>
+       </div>
+      </div>
       <label for="mail" class="form-label">Email ID</label>
       <input type="email" id="mail" class="form-control" formControlName="emailId">
-
+     <!-- get property, required, email, min, max, pattern-->
+      <div  class="errorBlock" *ngIf="mail.invalid">
+        <div *ngIf="mail.touched && mail.errors.required">
+             <b>This field is required</b>
+        </div>
+        <div *ngIf="mail.touched && mail.errors.email">
+         <b>Please put valid email</b>
+         </div>
+     </div>
       <label for="age" class="form-label">Age</label><br>
       <input type="number" id="age" class="form-control" formControlName="age">
-
+      <div class="errorBlock" *ngIf="age.invalid && age.touched">
+        <div *ngIf="age.errors.required">
+             <b>This field is required</b>
+        </div>
+        <div *ngIf="age.errors.min">
+            <b>min age 16 is allowed</b>
+         </div>
+         <div *ngIf="age.errors.max">
+            <b>max age 40 is allowed</b>
+         </div>
+     </div>
       <label for="uname" class="form-label">Set User Name</label>
       <input type="text" id="uname" class="form-control" formControlName="username">
-
+      <div class="errorBlock" *ngIf="uname.invalid && uname.touched">
+        <div *ngIf="uname.errors.required">
+             <b>This field is required</b>
+        </div>
+        <div *ngIf="uname.errors.minlength">
+            <b>username must be min 4 chars long</b>
+         </div>
+         <div *ngIf="uname.errors.maxlength">
+            <b>username must be max 12 chars long</b>
+         </div>
+     </div>
       <label for="pass" class="form-label">Set Password</label>
       <input type="password" id="pass" class="form-control" formControlName="password">
-      
-      
+      <div class="errorBlock" *ngIf="pass.invalid && pass.touched">
+        <div *ngIf="pass.errors.required">
+             <b>This field is required</b>
+        </div>
+        <div *ngIf="pass.errors.pattern">
+            <ul>
+                <li> Password should have atleast one
+                    <ul>
+                        <li>Small Letter</li>
+                        <li>Capital Letter</li>
+                        <li>Digit</li>
+                        <li>Special Symbol</li>
+                    </ul>
+                </li> 
+                <li>Password must be min 6 chars and max 15 chars long</li>
+            </ul>
+         </div>
+     </div>
       <label for="cpass" class="form-label">Confirm Password</label>
       <input type="password" id="cpass" class="form-control" formControlName="confirmPassword">
-      
+      <div class="errorBlock" *ngIf="cpass.invalid && cpass.touched">
+        <div *ngIf="cpass.errors.required">
+             <b>This field is required</b>
+        </div>
+      </div>
       <input type="submit" value="Login" class="btn btn-primary m-1">
        <input type="submit" value="Reset" class="btn btn-primary m-1">
     </form>     
     </div>
-    <div>
-        <p>Username is : <b>{{uname.value}}</b><br>
-        Password is : <b>{{pass.value}}</b></p>
-    </div>
 </section>
+
+

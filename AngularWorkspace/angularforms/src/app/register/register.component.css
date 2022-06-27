@@ -1,0 +1,22 @@
+
+input.ng-untouched{
+    background-color: wheat;
+}
+input.ng-touched{
+    background-color: aquamarine;
+}
+ input.ng-pristine{
+    border: 2px solid blue;
+}
+input.ng-dirty{
+    background-color: bisque;
+}
+input.ng-valid{
+    border:2px solid green;
+}
+input.ng-invalid{
+    border:2px solid red;
+} 
+.errorBlock{
+    color: red;
+}
