@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
       this.registerForm=new FormGroup({
-          name:new FormControl("",[Validators.required, Validators.minLength(2)]),
+          name:new FormControl("",[Validators.required,Validators.minLength(2)]),
           emailId:new FormControl("",[Validators.required,Validators.email]),
           age:new FormControl("",[Validators.required,Validators.min(16),Validators.max(40)]),
           username:new FormControl("",[Validators.required, Validators.minLength(4),Validators.maxLength(12)]),
@@ -39,8 +39,15 @@ export class RegisterComponent implements OnInit {
   get cpass(){
     return this.registerForm.get('confirmPassword');
   }
+
   collectForm(){
     console.log(this.registerForm);
+    console.log(this.registerForm.value.name);
+    console.log(this.registerForm.value.username);
+    console.log(this.registerForm.value.password);
+    console.log(this.registerForm.value.confirmPassword);
+    console.log(this.registerForm.value.age);
+   console.log(this.registerForm.get('confirmPassword').value);
    
   }
 

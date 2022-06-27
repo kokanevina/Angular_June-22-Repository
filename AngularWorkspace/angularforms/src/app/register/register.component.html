@@ -4,13 +4,14 @@
     <form [formGroup]="registerForm" (submit)="collectForm()">
       <label for="fname" class="form-label">Name</label>
       <input type="text" id="fname" class="form-control" formControlName="name">
-      <div class="errorBlock" *ngIf="name.invalid">
-           <div *ngIf="name.touched && name.errors.required">
+    
+      <div class="errorBlock" *ngIf="name.invalid && name.touched ">
+           <div *ngIf="name.errors.required">
                 <b>This field is required</b>
            </div>
-           <div *ngIf="name.touched && name.errors.minlength">
+           <div *ngIf="name.errors.minlength">
             <b>Name should be atleast 2 chars long</b>
-       </div>
+         </div>
       </div>
       <label for="mail" class="form-label">Email ID</label>
       <input type="email" id="mail" class="form-control" formControlName="emailId">
@@ -78,7 +79,11 @@
       </div>
       <input type="submit" value="Login" class="btn btn-primary m-1">
        <input type="submit" value="Reset" class="btn btn-primary m-1">
+      
     </form>     
+    </div>
+    <div>
+        {{uname.value}}
     </div>
 </section>
 

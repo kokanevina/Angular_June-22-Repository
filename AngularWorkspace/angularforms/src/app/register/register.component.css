@@ -9,14 +9,15 @@ input.ng-touched{
     border: 2px solid blue;
 }
 input.ng-dirty{
-    background-color: bisque;
+    border: 4px double violet;
 }
 input.ng-valid{
     border:2px solid green;
 }
 input.ng-invalid{
     border:2px solid red;
-} 
+}
+
 .errorBlock{
     color: red;
 }
