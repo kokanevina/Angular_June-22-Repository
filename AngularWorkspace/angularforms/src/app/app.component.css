@@ -1,0 +1,9 @@
+.navbar{
+    height: 80px;
+    border: 4px double blue;
+    background-color: coral;
+}
+.navbar a{
+    text-decoration: none;
+    margin: 20px;
+}

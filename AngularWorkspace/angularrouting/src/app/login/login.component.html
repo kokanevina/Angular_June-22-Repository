@@ -1,0 +1,17 @@
+<section class="container">
+    <h2 class="text-info">User Login </h2>
+    <div class="border border-2 p-3 bg-warning w-50">  
+    <form [formGroup]="loginForm" (submit)="collectForm()">
+      <label for="uname1" class="form-label">User Name</label><br>
+      <input type="text" id="uname1" class="form-control" formControlName="username"><br><br>
+      <label for="pass1" class="form-label">Password</label><br>
+      <input type="password" id="pass1" class="form-control" formControlName="password"><br><br>
+      <input type="submit" value="Login" class="btn btn-primary m-1">
+       <input type="submit" value="Reset" class="btn btn-primary m-1">
+    </form>     
+    </div>
+    <div>
+        <p>Username is : <b>{{uname.value}}</b><br>
+        Password is : <b>{{pass.value}}</b></p>
+    </div>
+</section>
