@@ -1,0 +1,14 @@
+
+<table class="table table-bordered w-50 mx-auto">
+    <thead>
+        <tr><th>ID</th><th>NAME</th><th>BASIC SALARY</th></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of empArray">
+            <td>{{emp.eid}}</td>
+            <td>{{emp.ename}}</td>
+            <td>{{emp.basicSalary}}</td>
+            <td><a [routerLink]="['/salarydetails',emp.eid,emp.ename]">Salary Details</a></td>
+        </tr>
+    </tbody>
+</table>

@@ -6,12 +6,16 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { EmployeesComponent } from './employees/employees.component';
+import { SalarydetailsComponent } from './salarydetails/salarydetails.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    NavbarComponent
+    NavbarComponent,
+    EmployeesComponent,
+    SalarydetailsComponent
   ],
   imports: [
     BrowserModule,ReactiveFormsModule,AppRoutingModule
