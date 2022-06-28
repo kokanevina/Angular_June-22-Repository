@@ -1,0 +1,3 @@
+Create edit link just after salary details link.
+When u click on edit, the new Form should be visible where we can edit existing employee details (except id). 
+When we submit the form, collect the data using Reactive form logic , then array should be updated. (check the logic of spread operator to update the array)
