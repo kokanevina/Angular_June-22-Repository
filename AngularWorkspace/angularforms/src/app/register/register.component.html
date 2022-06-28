@@ -51,7 +51,7 @@
          </div>
      </div>
       <label for="pass" class="form-label">Set Password</label>
-      <input type="password" id="pass" class="form-control" formControlName="password">
+      <input type="text" id="pass" class="form-control" formControlName="password">
       <div class="errorBlock" *ngIf="pass.invalid && pass.touched">
         <div *ngIf="pass.errors.required">
              <b>This field is required</b>
@@ -71,14 +71,19 @@
          </div>
      </div>
       <label for="cpass" class="form-label">Confirm Password</label>
-      <input type="password" id="cpass" class="form-control" formControlName="confirmPassword">
+      <input type="text" id="cpass" class="form-control" formControlName="confirmPassword">
       <div class="errorBlock" *ngIf="cpass.invalid && cpass.touched">
         <div *ngIf="cpass.errors.required">
              <b>This field is required</b>
         </div>
       </div>
-      <input type="submit" value="Login" class="btn btn-primary m-1">
-       <input type="submit" value="Reset" class="btn btn-primary m-1">
+      <div class="errorBlock" *ngIf="registerForm.invalid && cpass.touched">
+            <div *ngIf="registerForm.errors.match">
+                <b>Passwords not matching</b>
+            </div>
+      </div>
+      <input type="submit" value="Login" [disabled]="registerForm.invalid" class="btn btn-primary m-1">
+       <input type="reset" value="Reset" class="btn btn-primary m-1">
       
     </form>     
     </div>

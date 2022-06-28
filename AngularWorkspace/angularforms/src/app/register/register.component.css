@@ -14,9 +14,10 @@ input.ng-dirty{
 input.ng-valid{
     border:2px solid green;
 }
-input.ng-invalid{
+input.ng-invalid,form.ng-invalid{
     border:2px solid red;
 }
+
 
 .errorBlock{
     color: red;

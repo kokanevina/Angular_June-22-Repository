@@ -19,7 +19,7 @@ export class RegisterComponent implements OnInit {
           username:new FormControl("",[Validators.required, Validators.minLength(4),Validators.maxLength(12)]),
           password:new FormControl("",[Validators.required,Validators.pattern(this.passPattern)]),
           confirmPassword:new FormControl("",[Validators.required])
-      });
+      }, this.matchPassword);  // this custom validator is configured with FormGroup object
   }
   get uname(){
     return this.registerForm.get('username');
@@ -51,4 +51,20 @@ export class RegisterComponent implements OnInit {
    
   }
 
+  private matchPassword(regForm:FormGroup): {} | null{
+      let password=regForm.get('password').value;
+      let confpassword=regForm.get('confirmPassword').value;
+      if(password!=confpassword)
+        return {'match':true}  
+      else
+        return null;
+
+  }
+
+  
+
 }
+
+//if error : map return {'mismatch':true} : field in invalid
+// if no error : return null : field is valid
+
