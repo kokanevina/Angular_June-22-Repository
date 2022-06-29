@@ -1,0 +1,2 @@
+Implement businesslogic in MathService for square and cube of any number
+Pass data from view to service via component
