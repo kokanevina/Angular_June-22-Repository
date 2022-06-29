@@ -17,6 +17,7 @@ export class Child3Component implements OnInit {
 },3000); */
   }
   getC(){
+    this._mathS.incrementCounter();
      this.counttt=this._mathS.getCounter();
   }
 }

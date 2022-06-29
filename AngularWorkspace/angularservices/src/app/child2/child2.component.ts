@@ -19,6 +19,7 @@ export class Child2Component implements OnInit {
   this.cname2=MathService.companyName;
   }
   get(){
+    this._math.incrementCounter();
      this.countt=this._math.getCounter();
   }
 }
