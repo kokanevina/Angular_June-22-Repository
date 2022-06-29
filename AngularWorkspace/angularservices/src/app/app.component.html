@@ -1,0 +1,9 @@
+<section>
+  <input type="number" [(ngModel)]="num1">
+  <span>+</span>
+  <input type="number" [(ngModel)]="num2">
+  <span>=</span>
+  <button (click)="add1()" [ngStyle]="{margin:'10px'}">ADD</button>
+  <button (click)="sub1()" [ngStyle]="{margin:'10px'}">SUBTRACT</button>
+  <b>{{result}}</b>
+</section>
