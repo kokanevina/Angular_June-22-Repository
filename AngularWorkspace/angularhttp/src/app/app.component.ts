@@ -12,7 +12,7 @@ export class AppComponent {
 
   }
   getJsonData(){
-    this._http.get("http://localhost:4200/assets/Db.json/")
+    this._http.get("http://localhost:4200/assets/Db.json")
       .subscribe({
         next:successR=>
           console.log(successR)  ,
