@@ -1,0 +1,3 @@
+Implement AddTrain Component and UpdateTrain Component
+
+Use template driven forms logic. Collect the data from html to component.ts file with submit event

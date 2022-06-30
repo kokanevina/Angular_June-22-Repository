@@ -24,8 +24,7 @@ export class ChildComponent implements OnInit {
   }
  
   sendData(){
-    console.log("in sendData method");
-    
+    console.log("in sendData method");  
     this.emitEvent.emit(this.branchLocation);
   }
 }
