@@ -12,12 +12,19 @@ export class AppComponent {
 
   }
   getJsonData(){
-    this._http.get("http://localhost:4200/assets/Db.json")
+  /*   this._http.get("http://localhost:4200/assets/Db.json")
       .subscribe({
-        next:successR=>
-          console.log(successR)  ,
-        error:errorR=>console.log(errorR)
+        next:res=>console.log(res),
+        error:err=>console.log(err)
       }
+      ); */
+
+      this._http.get("http://localhost:3000/localtrains").subscribe(
+        {
+          next:res=>console.log(res),
+          error:err=>console.log(err)
+        }
       );
+
   }
 }
