@@ -1,5 +1,7 @@
 <section>
     <h2>CHILD</h2>
-    {{company}}
+    <span>Data from parent: {{company}}</span><br>
     <input type="text" [(ngModel)]="company">
+    <p>Child data : {{branchLocation}}</p>
+   Enter branch: <input type="text"[(ngModel)]="branchLocation" (blur)="sendData()"> 
 </section>

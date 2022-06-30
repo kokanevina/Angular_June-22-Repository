@@ -3,8 +3,9 @@
   <h2>APP COMPONENT</h2>
   <p>{{companyName}}</p>
   <input type="text" [(ngModel)]="companyName">
+  <p>Data from child : {{branch}}</p>
 </section>
 <hr>
-<app-child [company]="companyName"></app-child>
+<app-child [company]="companyName" (emitEvent)="getChildData($event)"></app-child>
 <!-- parent sharing a data with child, changes at parent side gets reflected at
 child side also-->
