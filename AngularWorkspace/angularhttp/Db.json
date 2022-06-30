@@ -1,20 +1,16 @@
-
-
 {
-
-   "localtrains":[
+  "localtrains": [
     {
-        "trainId":1212,
-        "trainRoute":"Harbour",
-        "trainSource":"xyz",
-        "trainDestination":"pqr"
+      "trainId": 1212,
+      "trainRoute": "Harbour",
+      "trainSource": "xyz",
+      "trainDestination": "pqr"
     },
     {
-        "trainId":1332,
-        "trainRoute":"Central",
-        "trainSource":"abc",
-        "trainDestination":"lmn"
+      "trainId": 1332,
+      "trainRoute": "Central",
+      "trainSource": "abc",
+      "trainDestination": "lmn"
     }
-   ]
-
+  ]
 }
