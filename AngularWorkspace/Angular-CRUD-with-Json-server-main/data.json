@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "task": "learn Angular",
+      "date": "2021-10-20",
+      "completed": true,
+      "id": 1
+    },
+    {
+      "task": "Learn Laravel",
+      "date": "2021-01-01",
+      "completed": true,
+      "id": 2
+    },
+    {
+      "task": "learn WordPress",
+      "date": "2021-05-30",
+      "completed": true,
+      "id": 3
+    }
+  ]
+}

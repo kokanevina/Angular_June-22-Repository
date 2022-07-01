@@ -1,3 +1,9 @@
+
+<nav>
+  <a routerLink="add">ADD TRAIN</a><a routerLink="trains">SHOW TRAINS</a>
+</nav>
+<router-outlet></router-outlet>
+<hr>
 <button (click)="getTrains()">GET TRAINS</button>
 <table border="3">
   <tr *ngFor="let tr of trains">

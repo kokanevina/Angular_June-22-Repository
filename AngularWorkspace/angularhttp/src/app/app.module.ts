@@ -3,14 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AddtrainComponent } from './addtrain/addtrain.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddtrainComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, HttpClientModule
+    AppRoutingModule, HttpClientModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

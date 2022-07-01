@@ -1,0 +1,62 @@
+<div class="todos container">
+        <!--  btn add task  -->
+        <div *ngIf="!showForm" class="row m-1 bg-dark p-4">
+        <button  (click)="showForm = !showForm" class="btn btn-primary m-3  col">Add Task</button>
+        <input type="text" (keyup)="findTask()" [(ngModel)]="seache" name="task" class="form-control m-3 col" placeholder="Find Task" id="exampleInputPassword1">
+        </div>
+        <!-- form task  -->
+        <form *ngIf="showForm" class="w-100 mb-2 bg-dark p-5">
+            <div class="row">   
+            <div class="mb-3 col">
+            <label  for="exampleInputEmail1" class="form-label text-white">Task</label>
+            <input [(ngModel)]="myTodo.task" type="email" name="task" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3 col">
+            <label for="exampleInputPassword1" class="form-label  text-white">Date</label>
+            <input [(ngModel)]="myTodo.date" type="date" name="date" class="form-control" id="exampleInputPassword1">
+            </div>
+            </div>
+            <div class="mb-3 form-check">
+            <input [(ngModel)]="myTodo.completed" type="checkbox" name="completed" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label  text-white" for="exampleCheck1">Combleted</label>
+            </div>
+            <button *ngIf="!editDorm" (click)="creatTask()" type="submit" class="btn btn-success m-1">Add</button>
+            <button *ngIf="editDorm" (click)="updateTodo()" type="submit" class="btn btn-success m-1">Update</button>
+            <button type="submit" (click)="editDorm = false" (click)="showForm = false"  class="btn btn-danger m-1 ">Cancel</button>
+        </form>
+        <!-- table data -->
+        <table *ngIf="elemntData.length > 0" class="table table-dark table-striped">
+            <thead>
+              <tr>
+                <th class="text-start" scope="col">#</th>
+                <th class="text-start" scope="col">Task </th>
+                <th class="text-start" scope="col">Date</th>
+                <th class="text-start" scope="col">Done</th>
+                <th class="text-start"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of resultTodos">
+                <th scope="row">{{item.id}}</th>
+                <td class="text-start">  {{item.task}}</td>
+                <td class="text-start">  {{item.date}}</td>
+                <td class="text-start"><i *ngIf="item.completed" class="fas fa-check-circle"></i> <i *ngIf="!item.completed" class="far fa-circle-notch"></i></td>
+                <td> 
+                    <!-- <button (click)="deletElement(item.id)" class="btn btn-danger m-1 btn-sm"> Delete</button> -->
+                    <button (click)="deleteTask(item.id)" class="btn btn-danger m-1 btn-sm"> Delete</button>
+                    <button (click)="editTask(item)" class="btn btn-warning m-1 btn-sm"> Update</button>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+</div>
+<style>
+    .todos{
+        margin-top: 70px;
+        min-height: 70vh;
+        /* align-items: center; */
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+    }
+</style>

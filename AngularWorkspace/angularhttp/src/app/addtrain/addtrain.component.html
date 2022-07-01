@@ -1,0 +1,14 @@
+<section>
+    <h2>TRAIN ADD FORM</h2>
+    <form #trainForm="ngForm"  (submit)="collectData(trainForm)">
+        <label>Enter train id:</label>
+        <input type="number" name="trainId" ngModel> <br>
+        <label>Enter train Route:</label>
+        <input type="text" name="trainRoute" ngModel> <br>
+        <label>Enter train source:</label>
+        <input type="text" name="trainSource" ngModel> <br>
+        <label>Enter train destination:</label>
+        <input type="text" name="trainDestination" ngModel> <br>
+        <input type="submit" value="ADD">
+    </form>
+</section>

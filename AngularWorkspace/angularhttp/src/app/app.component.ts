@@ -30,15 +30,18 @@ export class AppComponent {
 
    getTrains(){
      this._train.getAllTrains().subscribe({
-      next:res=>this.trains=res as any[],
+      next:res=>{this.trains=res as any[], console.log(this.trains);
+      },
       error:err=>console.log(err)
     });
+   
   }
-  delTrain(tid:number){
-    this._train.deleteTrain(tid).subscribe({
+  async delTrain(tid:number){
+    await this._train.deleteTrain(tid).subscribe({
       next:res=>console.log(res),
       error:err=>console.log(err)
     });
+    this.getTrains();
   }
 
 }
