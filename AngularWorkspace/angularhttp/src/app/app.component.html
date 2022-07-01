@@ -1,10 +1,10 @@
-<button (click)="getJsonData()">GET JSON DATA</button>
+<button (click)="getTrains()">GET TRAINS</button>
 <table border="3">
   <tr *ngFor="let tr of trains">
     <td>{{tr.trainId}}</td>
     <td>{{tr.trainRoute}}</td>
     <td>{{tr.trainSource}}</td>
     <td>{{tr.trainDestination}}</td>
-    <td><button (click)="deleteTrain(tr.trainId)">DELETE</button></td>
+    <td><button (click)="delTrain(tr.trainId)">DELETE</button></td>
   </tr>
 </table>
