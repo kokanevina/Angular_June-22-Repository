@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
-    NavbarComponent
+    NavbarComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,

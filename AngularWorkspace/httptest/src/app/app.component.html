@@ -1,2 +1,15 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
+<hr>
+<hr>
+Enter company: <input type="text" [(ngModel)]="companyName" >
+<ul>
+    <li *ngFor="let city of cityArray">{{city}}</li>
+</ul>
+<button (click)="cityArray.push('Satara')">PUSH</button>
+<hr>
+<button (click)="state=!state">CLICK</button>
+<section *ngIf="state">
+    <app-lifecycle [company]="companyName" [ctArray]="cityArray"></app-lifecycle>
+</section>
+

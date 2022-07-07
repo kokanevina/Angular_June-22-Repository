@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularcrud';
+  cityArray=['Mumbai','Pune','Delhi'];
+  companyName="Neosoft";
+  state=true;
 }
