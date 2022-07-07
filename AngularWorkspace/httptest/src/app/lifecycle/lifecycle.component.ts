@@ -34,8 +34,10 @@ export class LifecycleComponent implements OnInit,OnChanges,DoCheck,OnDestroy {
     }
   }
   ngOnDestroy(): void {
-    
+
    console.log("in Destroy");
    
   }
+
+  
 }
